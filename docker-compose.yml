@@ -83,7 +83,7 @@ services:
     environment:
       SPARK_MODE: client
       SPARK_MASTER_URL: spark://spark-master:7077
-      KAFKA_BOOTSTRAP_SERVERS: kafka:29092 # <-- CHANGE THIS LINE
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
       REDIS_HOST: redis
       REDIS_PORT: 6379
       SPARK_RPC_AUTHENTICATION_ENABLED: "no"
