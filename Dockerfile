@@ -13,4 +13,4 @@ COPY dashboard/ ./dashboard/
 EXPOSE 3000
 
 # Start Streamlit
-CMD ["streamlit", "run", "dashboard/app.py", "--server.port=3000", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "dashboard/streamlit_app.py", "--server.port=3000", "--server.address=0.0.0.0"]
