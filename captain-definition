@@ -1,12 +1,1 @@
-{
-  "schemaVersion": 2,
-  "templateId": "node-express",
-  "dockerfileLines": [
-    "FROM bitnami/spark:3.5.1",
-    "ENV SPARK_MODE=master",
-    "ENV SPARK_MASTER_PORT=7077",
-    "ENV SPARK_MASTER_WEBUI_PORT=8080",
-    "EXPOSE 7077 8080",
-    "CMD [\"/opt/bitnami/spark/bin/spark-class\", \"org.apache.spark.deploy.master.Master\"]"
-  ]
-}
+{ "schemaVersion": 2, "dockerfilePath": "./Dockerfile" }
