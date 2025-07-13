@@ -1,6 +1,5 @@
 {
   "schemaVersion": 2,
-  "templateId": "node-express",
   "dockerfileLines": [
     "FROM python:3.9-slim-buster",
     "WORKDIR /app",
