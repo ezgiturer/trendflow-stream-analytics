@@ -62,8 +62,7 @@ class TrendFlowStreamProcessor:
             .config("spark.sql.adaptive.enabled", "true") \
             .config("spark.sql.adaptive.coalescePartitions.enabled", "true") \
             .config("spark.jars.packages",
-                    "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0," \
-                    "org.apache.spark:spark-sql-extra_2.12:0.4.0") \
+                    "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,") \
             .config("spark.sql.shuffle.partitions", "8") \
             .getOrCreate()
         
