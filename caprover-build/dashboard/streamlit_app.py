@@ -27,7 +27,7 @@ if 'page_config_set' not in st.session_state:
 # --- Environment Variables ---
 REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
 REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))
-REDIS_PASSWORD = os.getenv("REDIS_PASSWORD", None)
+REDIS_PASSWORD = os.getenv("REDIS_PASSWORD", ".")
 
 # --- Caching Redis Connection ---
 @st.cache_resource
