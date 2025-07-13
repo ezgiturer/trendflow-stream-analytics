@@ -1,21 +1,16 @@
-# Use a lightweight Python base image
 FROM python:3.10-slim
 
-# Set the working directory inside the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
-# This step is cached, so it's faster if requirements.txt doesn't change
+# Install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire dashboard directory into the container
-# This includes your streamlit_app.py and any other files it needs
+# Copy your app code
 COPY dashboard/ ./dashboard/
 
-# Expose the port Streamlit runs on
-EXPOSE 8501
+# Expose port (CapRover will route traffic here)
+EXPOSE 3000
 
-# Command to run the Streamlit app
-# This command is what starts your dashboard when the container is run
-CMD ["streamlit", "run", "dashboard/streamlit_app.py", "--server.address=0.0.0.0", "--server.port=8501"]
+# Start Streamlit
+CMD ["streamlit", "run", "dashboard/streamlit_app.py", "--server.port=3000", "--server.address=0.0.0.0"]
