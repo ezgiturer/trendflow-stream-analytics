@@ -1,9 +1,0 @@
-{
-  "schemaVersion": 2,
-  "templateId": "node-express",
-  "dockerfileLines": [
-    "FROM bitnami/zookeeper:3.8.3",
-    "EXPOSE 2181",
-    "ENV ZOO_ENABLE_AUTH=no"
-  ]
-}

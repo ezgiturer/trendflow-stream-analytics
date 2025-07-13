@@ -1,1 +1,15 @@
-{ "schemaVersion": 2, "dockerfilePath": "./Dockerfile" }
+{
+  "schemaVersion": 2,
+  "templateId": "node-express",
+  "dockerfileLines": [
+    "FROM python:3.9-slim-buster",
+    "WORKDIR /app",
+    "COPY ./dashboard /app/dashboard",
+    "COPY ./requirements.txt /app/requirements.txt",
+    "RUN pip install --no-cache-dir -r /app/requirements.txt",
+    "EXPOSE 8501",
+    "ENV KAFKA_BOOTSTRAP_SERVERS=79.198.89.90:9092",
+    "ENV SPARK_MASTER_URL=spark://79.198.89.90:7077",
+    "CMD [\"streamlit\", \"run\", \"/app/dashboard/streamlit_app.py\", \"--server.port=8501\", \"--server.address=0.0.0.0\"]"
+  ]
+}
