@@ -6,11 +6,11 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy your app code
+# Copy your Streamlit app
 COPY dashboard/ ./dashboard/
 
-# Expose port (CapRover will route traffic here)
+# Expose the port Streamlit will use
 EXPOSE 3000
 
-# Start Streamlit
+# Run the actual app
 CMD ["streamlit", "run", "dashboard/streamlit_app.py", "--server.port=3000", "--server.address=0.0.0.0"]
