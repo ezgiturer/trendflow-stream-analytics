@@ -116,7 +116,7 @@ services:
       - STREAMLIT_SERVER_ADDRESS=0.0.0.0
       - KAFKA_BOOTSTRAP_SERVERS=kafka:29092
       - REDIS_HOST=redis
-      - REDIS_PORT=6379
+      - REDIS_PORT=3000
     volumes:
       - ./dashboard:/app/dashboard # Mount your Streamlit app
       - ./data:/app/data           # Mount your data directory if used by Streamlit
