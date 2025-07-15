@@ -27,6 +27,8 @@
 - **Python** – for data generation and dashboard
 - **Kafka** – for real-time data ingestion
 
+---
+
 ## Dashboard
 <img width="1738" height="506" alt="image" src="https://github.com/user-attachments/assets/a3946cc1-7e21-436f-9834-fc4d8c6dbcae" />
 <img width="1754" height="574" alt="image" src="https://github.com/user-attachments/assets/c235ce4a-bc71-4ea4-96bd-49ebeaaa38df" />
